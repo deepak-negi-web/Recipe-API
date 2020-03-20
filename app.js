@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/recipeDB", {
+mongoose.connect("mongodb+srv://admin-deepak:deepak991027@cluster0-c3lz9.mongodb.net/recipeDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
