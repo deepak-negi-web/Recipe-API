@@ -46,8 +46,8 @@ app.route("/recipes")
       genre: req.body.genre,
       name: req.body.name,
       description: req.body.description,
-      ingredients: [req.body.ingredients],
-      method: [req.body.method],
+      ingredients: req.body.ingredients,
+      method: req.body.method,
       author: req.body.author
     });
     newRecipe.save(function(err) {
@@ -95,8 +95,8 @@ app.route("/recipes/:query")
       genre: req.body.genre,
       name: req.body.name,
       description: req.body.description,
-      ingredients: [req.body.ingredients],
-      method: [req.body.method],
+      ingredients: req.body.ingredients,
+      method: req.body.method,
       author: req.body.author
     }, {
       overwrite: true
