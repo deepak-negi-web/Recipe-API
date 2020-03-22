@@ -24,7 +24,8 @@ const recipeSchema = new mongoose.Schema({
   method: [{
     type: String
   }],
-  author: String
+  author: String,
+  imageName: String
 });
 
 const Recipe = mongoose.model("Recipe", recipeSchema);
@@ -48,7 +49,8 @@ app.route("/recipes")
       description: req.body.description,
       ingredients: req.body.ingredients,
       method: req.body.method,
-      author: req.body.author
+      author: req.body.author,
+      imageName: req.body.imageName
     });
     newRecipe.save(function(err) {
       if (err) {
@@ -97,7 +99,8 @@ app.route("/recipes/:query")
       description: req.body.description,
       ingredients: req.body.ingredients,
       method: req.body.method,
-      author: req.body.author
+      author: req.body.author,
+      imageName: req.body.imageName
     }, {
       overwrite: true
     }, function(err) {
